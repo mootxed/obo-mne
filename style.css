@@ -36,3 +36,7 @@ button {
     padding: 12px;
     margin: 4px 0;
 }
+ button:hover {
+    background-color: black;
+    color: white;
+}
