@@ -10,12 +10,58 @@ body {
     justify-content: center; /* горизонтально */
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 4px black solid;
+    z-index: 1000;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease-out;
+}
+
+.nav a:hover {
+    color: #555;
+    border-color: #555;
+}
+
+.nav a:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
 main {
     width: 80%;
     max-width: 1200px;
     background-color: rgb(255, 255, 255);
     border: 4px black solid;
     padding: 12px;
+    margin-top: 60px;
 }
 
 #main-info {
@@ -27,7 +73,7 @@ main {
     padding-bottom: 12px;
 }
 
-button {
+.main-button {
     background-color: transparent;
     border: 2px black solid;
     font: inherit;
@@ -36,7 +82,8 @@ button {
     padding: 12px;
     margin: 4px 0;
 }
- button:hover {
+
+.main-button:hover {
     background-color: black;
     color: white;
 }
